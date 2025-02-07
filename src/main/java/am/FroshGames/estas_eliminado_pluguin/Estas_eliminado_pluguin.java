@@ -7,7 +7,6 @@ public final class Estas_eliminado_pluguin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Registrar eventos correctamente
         getServer().getPluginManager().registerEvents(new DeathMessageListener(), this);
         getLogger().info("¡El plugin de mensajes de muerte ha sido activado correctamente!");
     }
