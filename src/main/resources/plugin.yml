@@ -1,0 +1,6 @@
+name: Estas_eliminado_pluguin
+version: '0.1'
+main: am.FroshGames.estas_eliminado_pluguin.Estas_eliminado_pluguin
+api-version: '1.20'
+description: Un plugin que cambia el mensaje de muerte por "Estás eliminado."
+author: FroshGames
