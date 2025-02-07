@@ -7,12 +7,9 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 
 public class DeathMessageListener implements Listener {
 
-    public DeathMessageListener() {
-        // Constructor vacío
-    }
-
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event) {
+        // Forzar el mensaje personalizado en cualquier muerte
         event.setDeathMessage(ChatColor.RED + "Estás eliminado.");
     }
 }
