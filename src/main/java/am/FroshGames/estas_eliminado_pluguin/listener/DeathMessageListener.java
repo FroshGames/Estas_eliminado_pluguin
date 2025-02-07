@@ -11,11 +11,14 @@ public class DeathMessageListener implements Listener {
 
     @EventHandler
     public void onPlayerTakeHighDamage(EntityDamageEvent event) {
-        // Verificar si el evento afecta a un jugador
+        // Verificar si la entidad es un jugador
         if (event.getEntity() instanceof Player player) {
             // Verificar si el daño recibido es mayor o igual a 20 (10 corazones)
-            if (event.getDamage() >= 20) {
-                String message = ChatColor.RED + player.getName() + " ha sido eliminado por recibir daño extremo.";
+            if (event.getDamage() >= 1) {
+                String message = ChatColor.DARK_RED + "╔════════════════════╗\n" +
+                        ChatColor.RED + "   ❌ " + player.getName() + " ha sido eliminado ❌\n" +
+                        ChatColor.GOLD + "   🎮 ¡Gracias por jugar! 🎮\n" +
+                        ChatColor.DARK_RED + "╚════════════════════╝";
 
                 // Enviar el mensaje a todos los jugadores en el servidor
                 Bukkit.broadcastMessage(message);
