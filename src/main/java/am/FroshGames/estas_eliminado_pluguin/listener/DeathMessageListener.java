@@ -1,5 +1,6 @@
 package am.FroshGames.estas_eliminado_pluguin.listener;
 
+import am.FroshGames.estas_eliminado_pluguin.Estas_eliminado_pluguin;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -9,18 +10,23 @@ import org.bukkit.event.entity.EntityDamageEvent;
 
 public class DeathMessageListener implements Listener {
 
+    private final Estas_eliminado_pluguin plugin;
+
+    public DeathMessageListener(Estas_eliminado_pluguin plugin) {
+        this.plugin = plugin;
+    }
+
     @EventHandler
     public void onPlayerTakeHighDamage(EntityDamageEvent event) {
-        // Verificar si la entidad es un jugador
         if (event.getEntity() instanceof Player player) {
-            // Verificar si el daño recibido es mayor o igual a 20 (10 corazones)
-            if (event.getDamage() >= 1) {
+            double damageThreshold = plugin.getConfig().getDouble("damage-threshold", 10.0);
+
+            if (event.getDamage() >= damageThreshold) {
                 String message = ChatColor.DARK_RED + "╔════════════════════╗\n" +
                         ChatColor.RED + "   ❌ " + player.getName() + " ha sido eliminado ❌\n" +
                         ChatColor.GOLD + "   🎮 ¡Gracias por jugar! 🎮\n" +
                         ChatColor.DARK_RED + "╚════════════════════╝";
 
-                // Enviar el mensaje a todos los jugadores en el servidor
                 Bukkit.broadcastMessage(message);
             }
         }
