@@ -8,6 +8,8 @@ public class DeathMessageListener implements Listener {
 
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event) {
-        event.setDeathMessage("§cEstás eliminado.");
+        if (event.getEntity() != null && event.getEntity().getPlayer() != null) {
+            event.setDeathMessage("§cEstás eliminado.");
+        }
     }
 }
