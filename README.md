@@ -1,4 +1,4 @@
-# ⚰️ Custom Death Messages Plugin  
+9# ⚰️ Custom Death Messages Plugin  
 
 ## 📌 Descripción  
 Este plugin permite personalizar los mensajes de muerte en Minecraft 1.20.1, brindando una experiencia más inmersiva y única para tu servidor. Con este plugin, cada muerte tendrá un mensaje especial, ideal para servidores de rol, minijuegos o simplemente para añadir un toque divertido y diferente.  
@@ -35,7 +35,3 @@ Si tienes alguna sugerencia, pregunta o problema, no dudes en contactarme.
 
 ## 📞 Soporte  
 Si necesitas ayuda, puedes abrir un ticket en nuestro servidor de Discord o en el repositorio de GitHub.  
-
----
-
-Si quieres que agregue enlaces de contacto o redes sociales, dime y los incluyo. 🚀
